@@ -1,18 +1,20 @@
-# Django settings for controle_despesas project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Éverton R. Auler', 'evertonrobertoauler@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
+PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.pardir)
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(PROJECT_ROOT, "sqlite.db"), # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
