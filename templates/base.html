@@ -1,0 +1,36 @@
+<!doctype html>
+{% load i18n staticfiles %}
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <title>{% block title %}{% trans "Cost Control" %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-responsive.css' %}">
+        {% block extra_css %}{% endblock %}
+
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/bootstrap-extras.js' %}"></script>
+        {% block extra_js %}{% endblock %}
+
+        <!--[if lt IE 9]>
+        <script src="{% static 'js/html5shiv.js' %}"></script>
+        <![endif]-->
+
+        {% block extra_head %}{% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span2 left">
+                    {% block left_panel %}{% endblock %}
+                </div>
+                <div class="span7 middle">
+                    {% block main %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

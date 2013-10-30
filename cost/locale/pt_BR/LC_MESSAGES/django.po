@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 19:08-0200\n"
+"POT-Creation-Date: 2013-10-28 00:37-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,83 +16,68 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: cost/models.py:7
+#: models.py:7
 msgid "Fixed"
-msgstr "Fixa"
+msgstr "Fixas"
 
-#: cost/models.py:8
+#: models.py:8
 msgid "Others"
 msgstr "Outras"
 
-#: cost/models.py:12
+#: models.py:12
 msgid "Yes"
 msgstr "Sim"
 
-#: cost/models.py:13
+#: models.py:13
 msgid "No"
 msgstr "Não"
 
-#: cost/models.py:18
+#: models.py:18
 msgid "Debtor"
 msgstr "Devedor"
 
-#: cost/models.py:19
+#: models.py:19
 msgid "Creditor"
 msgstr "Credor"
 
-#: cost/models.py:20
+#: models.py:20
 msgid "Type"
 msgstr "Tipo"
 
-#: cost/models.py:21
+#: models.py:21
 msgid "Description"
 msgstr "Descrição"
 
-#: cost/models.py:22
+#: models.py:22
 msgid "Date"
 msgstr "Data"
 
-#: cost/models.py:29 cost/models.py:34
+#: models.py:29 models.py:34
 msgid "Cost"
 msgstr "Despesa"
 
-#: cost/models.py:30
+#: models.py:30
 msgid "Costs"
 msgstr "Despesas"
 
-#: cost/models.py:35
+#: models.py:35
 msgid "Number"
-msgstr "Nr. Parcela"
+msgstr "Número"
 
-#: cost/models.py:36
+#: models.py:36
 msgid "Expiration"
 msgstr "Vencimento"
 
-#: cost/models.py:37
+#: models.py:37
 msgid "Paid"
 msgstr "Paga"
 
-#: cost/models.py:44
+#: models.py:44
 msgid "Cost Part"
 msgstr "Parcela"
 
-#: cost/models.py:45
+#: models.py:45
 msgid "Cost Parts"
 msgstr "Parcelas"
-
-#: person/models.py:6
-msgid "Name"
-msgstr "Nome"
-
-#: person/models.py:7
-msgid "Institution"
-msgstr "Instituição"
-
-#: person/models.py:14
-msgid "Person"
-msgstr "Pessoa"
-
-#: person/models.py:15
-msgid "People"
-msgstr "Pessoas"

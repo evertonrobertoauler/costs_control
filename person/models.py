@@ -9,6 +9,10 @@ class Person(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        print(self.name)
+        return '/person/'
+
     class Meta:
         ordering = ["name"]
         verbose_name = _("Person")

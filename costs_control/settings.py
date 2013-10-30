@@ -20,9 +20,18 @@ DATABASES = {
 
 ALLOWED_HOSTS = ['*']
 TIME_ZONE = 'America/Sao_Paulo'
-LANGUAGE_CODE = 'pt-BR'
+
+LANGUAGE_CODE = 'pt_BR'
+
+ugettext = lambda s: s
+
+LANGUAGES = (
+    ('pt_BR', ugettext('Portuguese')),
+)
 
 LOCALE_PATHS = (
+    os.path.join(PROJECT_ROOT, "person", "locale"),
+    os.path.join(PROJECT_ROOT, "cost", "locale"),
     os.path.join(PROJECT_ROOT, "locale"),
 )
 
@@ -34,9 +43,11 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ()
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
