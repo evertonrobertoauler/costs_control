@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block main %}
+    <div class="page-header">
+        <h1>{% trans 'Delete Person' %}</h1>
+    </div>
+    <div class="well">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <button type="submit" class="btn btn-lg btn-danger">{% trans 'Confirm' %}</button>
+        </form>
+    </div>
+{% endblock %}

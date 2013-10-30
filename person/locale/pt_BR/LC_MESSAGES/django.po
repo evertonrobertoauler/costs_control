@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 20:55-0200\n"
+"POT-Creation-Date: 2013-10-29 23:09-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,10 +26,18 @@ msgstr "Nome"
 msgid "Institution"
 msgstr "Instituição"
 
-#: models.py:14
+#: models.py:18
 msgid "Person"
 msgstr "Pessoa"
 
-#: models.py:15
+#: models.py:19
 msgid "People"
 msgstr "Pessoas"
+
+#: templates/person/person_form.html:6
+msgid "Person Creation"
+msgstr "Inserir Pessoa"
+
+#: templates/person/person_form.html:12
+msgid "Submit"
+msgstr "Submeter"

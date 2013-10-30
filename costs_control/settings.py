@@ -86,6 +86,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'coverage',
+    'bootstrap_toolkit',
     'person',
     'cost',
 )
