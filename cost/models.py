@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Sum
 from person.models import Person
 from datetime import date
 from django.utils.translation import ugettext as _
@@ -20,6 +21,10 @@ class Cost(models.Model):
     cost_type = models.SmallIntegerField(_('Type'), choices=COST_TYPE)
     description = models.CharField(_('Description'), max_length=100)
     cost_date = models.DateField(_('Date'), default=date.today())
+
+    @property
+    def total_value(self):
+        return float(self.costpart_set.aggregate(t=Sum('value'))['t'])
     
     def __str__(self):
         return self.description
@@ -32,9 +37,10 @@ class Cost(models.Model):
 
 class CostPart(models.Model):
     cost = models.ForeignKey(Cost, verbose_name=_("Cost"))
-    number = models.IntegerField(_("Number"))
+    number = models.PositiveIntegerField(_("Number"))
     expiration = models.DateField(_("Expiration"))
     paid = models.BooleanField(_("Paid"), choices=YES_NO)
+    value = models.DecimalField(_("Value"), max_digits=10, decimal_places=2)
 
     def __str__(self):
         return str(self.number)

@@ -5,11 +5,11 @@
     <div class="page-header">
         <h1>{% trans 'People' %}</h1>
     </div>
-    <ul class="list-group">
+    <ul class="nav nav-pills nav-stacked">
         {% for person in object_list %}
-            <li class="list-group-item">{{ person.name }} - {{ person.institution }}</li>
+            <li><a>{{ person.name }} - {{ person.institution }}</a></li>
         {% empty %}
-            <li class="list-group-item">{% trans 'No people yet.' %}</li>
+            <li>{% trans 'No people yet.' %}</li>
         {% endfor %}
     </ul>
 {% endblock %}
