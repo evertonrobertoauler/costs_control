@@ -1,7 +1,6 @@
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from person.models import Person
-from django.core.urlresolvers import reverse_lazy
 
 
 class PersonListView(ListView):
@@ -10,15 +9,15 @@ class PersonListView(ListView):
 
 class PersonCreateView(CreateView):
     model = Person
-    success_url = reverse_lazy('person-list')
+    success_url = '/person/'
 
 
 class PersonUpdateView(UpdateView):
     model = Person
-    success_url = reverse_lazy('person-list')
+    success_url = '/person/'
     template_name_suffix = '_update_form'
 
 
 class PersonDeleteView(DeleteView):
     model = Person
-    success_url = reverse_lazy('person-list')
+    success_url = '/person/'

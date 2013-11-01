@@ -1,15 +1,32 @@
 {% extends "base.html" %}
-{% load i18n bootstrap_toolkit %}
+{% load i18n bootstrap_toolkit verbose_names %}
 
 {% block main %}
     <div class="page-header">
         <h1>{% trans 'People' %}</h1>
     </div>
-    <ul class="nav nav-pills nav-stacked">
+    <table class="table table-striped">
         {% for person in object_list %}
-            <li><a>{{ person.name }} - {{ person.institution }}</a></li>
+            {% if forloop.first %}
+                <tr>
+                    <th>{% get_verbose_name person "name" %}</th>
+                    <th>{% get_verbose_name person "institution" %}</th>
+                    <th></th>
+                </tr>
+            {% endif %}
+            <tr>
+                <td>{{ person.name }}</td>
+                <td>{{ person.institution }}</td>
+                <td>
+                    <a href="{% url 'person-edit' person.pk %}" class="btn btn-success">{% trans 'Update' %}</a>
+                    <a href="{% url 'person-delete' person.pk %}" class="btn btn-danger">{% trans 'Delete' %}</a>
+                </td>
+            </tr>
         {% empty %}
-            <li>{% trans 'No people yet.' %}</li>
+        <tr>
+            <td>{% trans 'No people yet.' %}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
+    <p><a href="{% url 'person-add' %}" class="btn btn-primary">{% trans 'Create' %}</a></p>
 {% endblock %}

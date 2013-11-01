@@ -10,6 +10,7 @@
             {% csrf_token %}
             {{ form|as_bootstrap }}
             <button type="submit" class="btn btn-primary">{% trans 'Create' %}</button>
+            <a href="{% url 'person-list' %}" class="btn btn-danger">{% trans 'Cancel' %}</a>
         </form>
     </div>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 23:09-0200\n"
+"POT-Creation-Date: 2013-10-31 23:53-0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,14 +30,47 @@ msgstr "Instituição"
 msgid "Person"
 msgstr "Pessoa"
 
-#: models.py:19
+#: models.py:19 templates/person/person_list.html:6
 msgid "People"
 msgstr "Pessoas"
 
+#: templates/person/person_confirm_delete.html:6
+msgid "Delete Person"
+msgstr "Excluir Pessoa"
+
+#: templates/person/person_confirm_delete.html:11
+msgid "Are you sure you want to delete"
+msgstr "Você tem certeza que quer excluir"
+
+#: templates/person/person_confirm_delete.html:12
+msgid "Confirm"
+msgstr "Confirmar"
+
 #: templates/person/person_form.html:6
-msgid "Person Creation"
+msgid "Create Person"
 msgstr "Inserir Pessoa"
 
-#: templates/person/person_form.html:12
-msgid "Submit"
-msgstr "Submeter"
+#: templates/person/person_form.html:12 templates/person/person_list.html:31
+msgid "Create"
+msgstr "Inserir"
+
+#: templates/person/person_form.html:13
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/person/person_list.html:21
+#: templates/person/person_update_form.html:12
+msgid "Update"
+msgstr "Atualizar"
+
+#: templates/person/person_list.html:22
+msgid "Delete"
+msgstr "Excluir"
+
+#: templates/person/person_list.html:27
+msgid "No people yet."
+msgstr "Nenhuma pessoa inserida ainda"
+
+#: templates/person/person_update_form.html:6
+msgid "Update Person"
+msgstr "Atualizar Pessoa"
